@@ -16,8 +16,6 @@ Don't touch.....
 - [Getting Started](#Getting-Started)
 - [Prerequisites](#Prerequisites)
 - [Tasks](#Tasks)
-  - [Part:1 Hello World, Who?](#part1-hello-word-who)
-  - [Part:2 Digital Resume](#part2-digital-resume)
 - [Installing](#Installing)
 - [FAQ](#faq)
 - [Authors](#Authors)
@@ -138,26 +136,18 @@ No installing is required for the first part of the Project.
 <!--FAQ for Team-->
 
 ## FAQ
+Question | Answer
+------------ | -------------
 
-- How I do this?
+How I do this? | Just pull down and run index.html with live server.
 
-Just pull down and run index.html with live server.
+Why no server? | Because it's due monday and ain't no body got time for that right now with midterms, covid and etc.
 
-- Why no server?
+You want server. | Yes, I do. I'll probably implement it later with MongoDB or Sequelize. (John will huant me if I don't learn Sequelize)
 
-Because it's due monday and ain't no body got time for that right now with midterms, covid and etc.
+Why pages recreate? | I want to get some commits in, and I notice all the points are weighed on HTML and CSS only... I don't know if I'll get much points if I just do backend.
 
-- You want server.
-
-Yes, I do. I'll probably implement it later with MongoDB or Sequelize. (John will huant me if I don't learn Sequelize)
-
-- Why pages recreate?
-
-I want to get some commits in, and I notice all the points are weighed on HTML and CSS only... I don't know if I'll get much points if I just do backend.
-
-- You do logo!?
-
-Yes... give me time. Might just roll with a gamepad for now, but it'll get done.
+You do logo!? | Yes... give me time. Might just roll with a gamepad for now, but it'll get done.
 
 <!--Author Heading-->
 
@@ -181,8 +171,8 @@ This project is licensed under my own imgination.
 
 ---
 
-Stephon is the homie.
-John is the support god.
+* Stephon is the homie.
+* John is the support god.
 
 <!--Quote od the "project" Heading-->
 
