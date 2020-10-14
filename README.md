@@ -2,8 +2,6 @@
 
 Don't touch.....
 
-
-
 <!-- Table of contents for people navigate quicker
 *Issues exist with the spacing within the ID call '%20' is not working properly and will not link to topics unable to resolve-->
 
@@ -99,11 +97,13 @@ You have to know
 
 2. [ ] Add Milestones for each project checkpoint with their due dates
 
-3. [ ] Enrich your repository with any labels you think will be useful for issue tracking 1. [ ] For this project check point you will need to create epics for Database, User
+3. [ ] Enrich your repository with any labels you think will be useful for issue tracking 
+    1. [ ] For this project check point you will need to create epics for Database, User
        Authentication and Framework
 
 4. [ ] Create issues for each unit of work in a project checkpoint and assign them to their
-       corresponding epics 1. [ ] Make sure to enrich each issue with labels, owners, milestones, etc.
+       corresponding epics 
+    1. [ ] Make sure to enrich each issue with labels, owners, milestones, etc.
 
 5. [ ] Create a README detailing what the project entails
 
@@ -111,19 +111,20 @@ You have to know
    1. [ ] Create an issue detailing how your team will lay out your files (images, CSS, HTML code,
           JavaScript code, etc.)
 7. [ ] Break Down of Work
-    1. [ ] Create an issue detailing how your team will divide up work evenly. Additionally, determine
-how the rest of the team will assist other team members who are struggling to meet their
-assigned work.
-    2. [ ] Assign issues to induvial team members via GitHub
-    3. [ ] Determine how bugs and other “issues” will be tracked and include that in your break down
-work issue
+
+   1. [ ] Create an issue detailing how your team will divide up work evenly. Additionally, determine
+          how the rest of the team will assist other team members who are struggling to meet their
+          assigned work.
+   2. [ ] Assign issues to induvial team members via GitHub
+   3. [ ] Determine how bugs and other “issues” will be tracked and include that in your break down
+          work issue
 
 8. [ ] Code Contributions and Pushing Code
- 1. [ ] Create an issue detailing how you will push/pull code without stepping on each other’s toes. 
- 2. [ ] No use of the file upload will be allowed on GitHub
- 3. [ ] No use of individual repositories should be used. Everything should be tracked with the
-team repository
-4. [ ] Hint: Look at branching and Pull Requests to come up with a good work flow
+9. [ ] Create an issue detailing how you will push/pull code without stepping on each other’s toes.
+10. [ ] No use of the file upload will be allowed on GitHub
+11. [ ] No use of individual repositories should be used. Everything should be tracked with the
+        team repository
+12. [ ] Hint: Look at branching and Pull Requests to come up with a good work flow
 
 <!--Installing Heading (none required)-->
 
@@ -136,13 +137,15 @@ No installing is required for the first part of the Project.
 <!--FAQ for Team-->
 
 ## FAQ
-Question | Answer
------------- | -------------
-| How I do this? | Just pull down and run index.html with live server. |
-Why no server? | Because it's due monday and ain't no body got time for that right now with midterms, covid and etc.
-You want server. | Yes, I do. I'll probably implement it later with MongoDB or Sequelize. (John will huant me if I don't learn Sequelize)
-| Why pages recreate? | I want to get some commits in, and I notice all the points are weighed on HTML and CSS only... I don't know if I'll get much points if I just do backend.
-You do logo!?|Yes... give me time. Might just roll with a gamepad for now, but it'll get done.
+
+| Question            | Answer                                                                                                                                                    |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| How I do this?      | Just pull down and run index.html with live server.                                                                                                       |
+| Why no server?      | Because it's due monday and ain't no body got time for that right now with midterms, covid and etc.                                                       |
+| You want server.    | Yes, I do. I'll probably implement it later with MongoDB or Sequelize. (John will huant me if I don't learn Sequelize)                                    |
+| Why pages recreate? | I want to get some commits in, and I notice all the points are weighed on HTML and CSS only... I don't know if I'll get much points if I just do backend. |
+| You do logo!?       | Yes... give me time. Might just roll with a gamepad for now, but it'll get done.                                                                          |
+| Why Name Change?    | C3PO started sounding lame, I chose Atomic because an Atom is indivisible, and I feel like thats what this company will stand for. Open for suggestions.  |
 
 <!--Author Heading-->
 
@@ -166,8 +169,8 @@ This project is licensed under my own imgination.
 
 ---
 
-* Stephon is the homie.
-* John is the support god.
+- Stephon is the homie.
+- John is the support god.
 
 <!--Quote od the "project" Heading-->
 
