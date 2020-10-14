@@ -54,3 +54,24 @@ img {
     top: 0px;
     padding: 0 30px;
 }
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: red 2px solid;
+}
+
+.navbar ul{
+/* Line it in a row */
+    display: flex;
+}
+
+.navbar .logo {
+
+    font-weight: 400;
+
+}
