@@ -74,6 +74,7 @@ Below are resources I used to help me through this project.
 - Make the website responsive
 - Need to grab Profile Imgs from each team member
 - Need to fix the navigation from any other page, back to home... Team does not get populated.
+
 <!--To explain how to start-->
 
 ## Getting Started
