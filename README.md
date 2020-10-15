@@ -131,8 +131,9 @@ You have to know
 ## Installing
 
 ---
-
-No installing is required for the first part of the Project.
+What I done. (will develop a simple script to take care of installs.)
+* npm i swup
+* npm -y init
 
 <!--FAQ for Team-->
 
