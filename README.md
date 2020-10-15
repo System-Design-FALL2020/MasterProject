@@ -65,8 +65,15 @@ Below are resources I used to help me through this project.
 
 - Finish up home page
 - Get four more unique pages, with a synced theme.
-- Get some fun CSS styles in.
-
+   1. Need to build out these unique pages now
+   2. Need one more unique page
+- Keep getting some fun CSS styles in.
+- I want to add text to the team section (above controller)
+- Add drop down to Home, Dynamically travel on the page
+- Redo Navbar
+- Make the website responsive
+- Need to grab Profile Imgs from each team member
+- Need to fix the navigation from any other page, back to home... Team does not get populated.
 <!--To explain how to start-->
 
 ## Getting Started
@@ -178,7 +185,7 @@ This project is licensed under my own imgination.
 - Stephon is the homie.
 - John is the support god.
 
-<!--Quote od the "project" Heading-->
+<!--Quote of the "project" Heading-->
 
 ### Quote of the _project_
 
