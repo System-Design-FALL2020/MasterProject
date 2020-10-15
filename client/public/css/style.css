@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html {
+  overflow: scroll;
 }
-
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 body {
   font-family: "Open Sans", sans-serif;
-  background: white;
+  background: black;
   color: #333;
   line-height: 1.6;
+  height: 100%;
 }
 
 ul {
@@ -115,13 +116,11 @@ img {
 
 /* Fancy CSS */
 
-.transition-fade{
-
+.transition-fade {
   opacity: 1;
   transition: 1000ms;
   transform: translateX(0);
   transform-origin: left;
-
 }
 
 html.is-animating .transition-fade {
@@ -129,9 +128,67 @@ html.is-animating .transition-fade {
   transform: translateX(100%);
 }
 
-html.is-leaving .transition-fade{
+html.is-leaving .transition-fade {
   opacity: 0;
   transform: translateX(-100%);
 }
 
+/* Cards */
 
+.strip {
+  position: absolute;
+  height: 100vh;
+  background: white;
+  width: 0.0625rem;
+  opacity: 0.3;
+}
+.one {
+  left: 25%;
+}
+.two {
+  left: 50%;
+}
+.three {
+  left: 75%;
+}
+.cardcontainer {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  padding: 16.875rem 1.5rem;
+}
+.card-grid {
+  display: grid;
+  grid-column-gap: 1.5rem; /* adjust gaps between cards */
+  max-width: 75rem; /* adjust the width size of the screen */
+  width: 100%; /* Contain the full width */
+}
+
+@media (min-width: 75rem) /* the width of the media query will be the same as you set above*/ {
+  .card-grid {
+    grid-template-columns: repeat(4 /* Number of profiles */, 1fr);
+  }
+}
+
+.card{
+  position: relative;
+}
+
+.card::before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+
+}
+
+.card-background{
+  background-size: cover;
+  background-position:center;
+  border-radius: 0.9375rem;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+
+}
