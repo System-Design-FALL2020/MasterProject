@@ -7,12 +7,7 @@ h1{
 		color: blue;
 }
 
-.game_image {
-	justify-self: left;
-	width: 240px;
-}
-
-#infoPage{
-	border-style: solid;
-	padding: 100px;
+body{
+	background-image: linear-gradient(#ff6666,white);
+	padding: 50px;
 }
