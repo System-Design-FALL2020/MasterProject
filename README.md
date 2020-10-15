@@ -9,7 +9,7 @@ Don't touch.....
 
 - [Project Title: Startup Website ](#project-title-startup-website)
 - [Resources Used](#Resources-Used)
-- [Errors](#Errors)
+- [Latest Update](#Latest-Update)
 - [Personal Check List](#Personal-Check-List)
 - [Getting Started](#Getting-Started)
 - [Prerequisites](#Prerequisites)
@@ -46,11 +46,16 @@ Below are resources I used to help me through this project.
 
 <!--List of Erros I'm facing-->
 
-## Errors
+## Latest Update
 
 ---
 
-No Errors at the moment
+### Latest update 10/15
+
+* Added team section with css styling. 
+* I want to add one more thing to the team section, text above the cards.
+* Added transition between pages to act on the header only, might change? Not sure.
+
 
 <!--Things that I want to add to the project-->
 
