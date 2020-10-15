@@ -1,0 +1,18 @@
+h1{
+	text-decoration: underline;
+}
+
+#tiny_text{
+		font-size: small;
+		color: blue;
+}
+
+.game_image {
+	justify-self: left;
+	width: 240px;
+}
+
+#infoPage{
+	border-style: solid;
+	padding: 100px;
+}
