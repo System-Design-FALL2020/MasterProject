@@ -68,7 +68,7 @@ Below are resources I used to help me through this project.
    1. Need to build out these unique pages now
    2. Need one more unique page
 - Keep getting some fun CSS styles in.
-- I want to add text to the team section (above controller)
+- ~~I want to add text to the team section (above controlle)~~
 - Add drop down to Home, Dynamically travel on the page
 - Redo Navbar
 - Make the website responsive
