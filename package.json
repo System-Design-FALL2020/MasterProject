@@ -20,6 +20,7 @@
   "homepage": "https://github.com/System-Design-FALL2020/MasterProject#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "node": "^15.0.1",
     "nodemon": "^2.0.6",
     "path": "^0.12.7",
     "swup": "^2.0.11"
