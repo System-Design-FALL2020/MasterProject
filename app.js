@@ -1,23 +1,13 @@
 const express = require('express');
-const { restart } = require('nodemon');
-const { dirname } = require('path');
+const path = require('path');
 const app = express();
 // Create Path
 
-const path = require('path');
 
-// Set static folder
-// app.use(express.static(path.join(__dirname, 'Views')));
+
 
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-
-// ROUTES
-
-
-
-
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 // Create the PORT
 

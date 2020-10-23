@@ -27,6 +27,7 @@ html {
   background: transparent;
 }
 body {
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   background: black;
   color: #333;
@@ -109,7 +110,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100%;
+  height: 1000px;
   padding: 0 20px;
 }
 
@@ -308,4 +309,8 @@ html.is-leaving .transition-fade{
     color: inherit;
     text-shadow: inherit;
   }
+
 }
+
+
+
