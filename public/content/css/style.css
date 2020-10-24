@@ -8,8 +8,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 * {
   box-sizing: border-box;
@@ -17,12 +17,10 @@
   margin: 0;
 }
 
-
 html {
-
   overflow: scroll;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
@@ -33,7 +31,6 @@ body {
   color: #333;
   line-height: 1.6;
   height: 100vh;
-  
 }
 
 ul {
@@ -97,7 +94,8 @@ img {
 /* Header */
 
 .hero {
-  background: url("/Content/Backgrounds/controller.jpg") no-repeat center center/cover;
+  background: url("/content/backgrounds/controller.jpg") no-repeat center
+    center/cover;
   height: 100vh;
   position: relative;
   color: white;
@@ -139,13 +137,11 @@ img {
 
 /* Transition CSS */
 
-.transition-fade{
-
+.transition-fade {
   opacity: 1;
   transition: 1000ms;
   transform: translateX(0);
   transform-origin: left;
-
 }
 
 html.is-animating .transition-fade {
@@ -153,7 +149,7 @@ html.is-animating .transition-fade {
   transform: translateX(100%);
 }
 
-html.is-leaving .transition-fade{
+html.is-leaving .transition-fade {
   opacity: 0;
   transform: translateX(-100%);
 }
@@ -163,7 +159,7 @@ html.is-leaving .transition-fade{
 /* Cards */
 
 .card-container {
-  background: url("/Content/Backgrounds/team.jpg") no-repeat center center/cover;
+  background: url("/content/backgrounds/team.jpg") no-repeat center center/cover;
   height: 100vh;
   position: relative;
   color: white;
@@ -200,7 +196,7 @@ html.is-leaving .transition-fade{
 }
 
 .card::before {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 150%;
 }
@@ -217,37 +213,36 @@ html.is-leaving .transition-fade{
   transition: filter 0.2s linear, transform 200ms linear;
 }
 
-.card:hover{
-  opacity: 1.0;
+.card:hover {
+  opacity: 1;
 }
 
 .card:hover .card-background {
   transform: scale(1.25) translateZ(0);
-  
 }
 
 .card-grid:hover > .card:not(:hover) .card-background {
-  filter: brightness(.5) saturate(1) contrast(1) blur(1.25rem); /* Adjust the as seen fit for unfocused profiles */
+  filter: brightness(0.5) saturate(1) contrast(1) blur(1.25rem); /* Adjust the as seen fit for unfocused profiles */
 }
 
-.card-content{
+.card-content {
   padding: 14.375rem 1.25rem;
   position: absolute;
   top: 0;
 }
 
-.card-description{
-  color: rgba(255,255,255, .5); /* Change the color of description */
-  font-size: .9rem;
+.card-description {
+  color: rgba(255, 255, 255, 0.5); /* Change the color of description */
+  font-size: 0.9rem;
   text-transform: uppercase;
 }
-.card-heading{
-  color: rgba(255,255,255, .9); /* Adjust Profile Name Color */
+.card-heading {
+  color: rgba(255, 255, 255, 0.9); /* Adjust Profile Name Color */
   font-size: 1.9rem;
-  text-shadow: 0.125rem 0.125rem 1.25rem rgba(0,0,0,.2) /* Text shadow Adjustment */
+  text-shadow: 0.125rem 0.125rem 1.25rem rgba(0, 0, 0, 0.2); /* Text shadow Adjustment */
 }
 
-.our-team{
+.our-team {
   text-align: center;
   height: 250px;
   margin: auto;
@@ -259,58 +254,46 @@ html.is-leaving .transition-fade{
   user-select: none;
 }
 
-.our-team b{
+.our-team b {
   font: 400 19vh "vibur";
   color: rgb(177, 110, 184);
-  text-shadow: 0 -40px 100px,
-  0 0 2px,
-  0 0 1em #ff4444,
-  0 0 0.5em #ff4444,
-  0 10px 3px #000;
-
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
+    0 10px 3px #000;
 }
-.our-team b span{
+.our-team b span {
   animation: blink linear infinite 2s;
 }
-.our-team b span:nth-child(2){
+.our-team b span:nth-child(2) {
   animation: blink linear infinite 3s;
-
 }
-@keyframes blink
-{
+@keyframes blink {
   78% {
     color: inherit;
     text-shadow: inherit;
   }
-  79%{
-    color: #333
+  79% {
+    color: #333;
   }
-  80%{
+  80% {
     text-shadow: none;
   }
-  81%{
+  81% {
     color: inherit;
     text-shadow: inherit;
   }
-  82%
-  {
+  82% {
     color: #333;
   }
-  83%
-  {
+  83% {
     color: inherit;
     text-shadow: none;
   }
-  92%{
+  92% {
     color: #333;
     text-shadow: none;
   }
-  92.5%{
+  92.5% {
     color: inherit;
     text-shadow: inherit;
   }
-
 }
-
-
-
