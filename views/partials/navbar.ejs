@@ -1,0 +1,20 @@
+<header class="hero">
+  <div id="navbar" class="navbar">
+    <h1 class="logo">
+      <span class="text-primary"><i class="fas fa-gamepad"></i> Atomic </span>
+      Gaming
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/Browse">Browse</a></li>
+        <li><a href="/Login">Login</a></li>
+        <li><a href="/Login">Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <% if (title === 'Home') { %> <%- include("./homecontent.ejs") %> <% } else if
+  (title === "Browse") { %> <%- include("./browsecontent.ejs") %> <% } else if
+  (title === "Login") { %> <%- include("./logincontent.ejs") %> <% } %>
+</header>
