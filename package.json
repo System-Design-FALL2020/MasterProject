@@ -19,12 +19,17 @@
   },
   "homepage": "https://github.com/System-Design-FALL2020/MasterProject#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "node": "^15.0.1",
     "nodemon": "^2.0.6",
     "path": "^0.12.7",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0",
     "swup": "^2.0.11"
-  }
+  },
+  "devDependencies": {}
 }
