@@ -33,4 +33,12 @@ router.get("/Login", (req, res) => {
   // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
+router.get("/Cart", (req, res) => {
+  res.render("index.ejs", {
+    layout: "layouts/standardlayout.ejs",
+    title: "Cart",
+  });
+});
+  // res.sendFile('/views/cart/cart.html', { root: 'public'});
+
 module.exports = router;
