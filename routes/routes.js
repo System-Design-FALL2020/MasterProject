@@ -41,4 +41,12 @@ router.get("/Cart", (req, res) => {
 });
   // res.sendFile('/views/cart/cart.html', { root: 'public'});
 
+  router.get("/Signup", (req, res) => {
+    res.render("index.ejs", {
+      layout: "layouts/standardlayout.ejs",
+      title: "Signup",
+    });
+  });
+    // res.sendFile('/views/cart/cart.html', { root: 'public'});
+
 module.exports = router;
