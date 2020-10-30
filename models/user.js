@@ -28,6 +28,10 @@ const User = sequelize.define(
         this.setDataValue("password", hash);
       },
     },
+    cart: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   { timestamps: false }
 );

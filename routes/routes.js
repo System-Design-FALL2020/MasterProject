@@ -1,9 +1,11 @@
 const express = require("express");
 const userRouter = require("./controllers/usercontroller");
 
-const router = express.Router();
+const Product = require("../models/product");
+const Cart = require("../models/cart");
+const CartItem = require("../models/cartItem");
 
-router.use(userRouter);
+const router = express.Router();
 
 router.get("/", (req, res) => {
   res.redirect("/Home");
@@ -33,20 +35,29 @@ router.get("/Login", (req, res) => {
   // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
-router.get("/Cart", (req, res) => {
+router.get("/Cart", async (req, res) => {
+  var user = { id: 1 };
+  var cart = await Cart.findOne({
+    where: {
+      user: user.id
+    }
+  });
+  var cartItems = await CartItem.findAll({
+    where: {
+      cart: cart.id
+    }
+  });
+  for (var i = 0; i < cartItems.length; i++) {
+    var prod = await Product.findByPk(cartItems[i].product);
+    cartItems[i].name = prod.name; 
+    cartItems[i].price = prod.price; 
+  }
   res.render("index.ejs", {
     layout: "layouts/standardlayout.ejs",
     title: "Cart",
+    cartItems: cartItems,
   });
+  // res.sendFile('/views/login/login.html', { root: 'public'});
 });
-  // res.sendFile('/views/cart/cart.html', { root: 'public'});
-
-  router.get("/Signup", (req, res) => {
-    res.render("index.ejs", {
-      layout: "layouts/standardlayout.ejs",
-      title: "Signup",
-    });
-  });
-    // res.sendFile('/views/cart/cart.html', { root: 'public'});
 
 module.exports = router;

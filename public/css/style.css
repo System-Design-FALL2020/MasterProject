@@ -108,7 +108,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 1000px;
+  height: 775px;
   padding: 0 20px;
 }
 
@@ -296,4 +296,60 @@ html.is-leaving .transition-fade {
     color: inherit;
     text-shadow: inherit;
   }
+}
+
+
+/* Cart */
+.cart-container {
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 20px;
+  padding-top: 20px;
+}
+
+.cart-table {
+  padding: 20px;
+}
+
+.cart-table td, .cart-table th {
+  padding: 20px;
+  text-align: right;
+}
+
+.cart-table .item-row td:first-child, .cart-table tr:first-child th:first-child {
+  text-align: left;
+}
+
+.item-row .removal-button {
+  margin-right: 10px;
+  padding: 2px 8px;
+}
+
+.item-row .removal-button:hover {
+  background-color: darkred;
+  border-color: darkred;
+}
+
+.item-row input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+}
+
+.cart-table .total-row td, .cart-table .total-row th {
+  padding: 5px 20px;
+}
+
+.cart-table .button-row td{
+  text-align: center;
+}
+
+.button-row .checkout-button {
+  background-color: green;
+  border-color: green;
+}
+
+.button-row .checkout-button:hover {
+  background-color: darkgreen;
+  border-color: darkgreen;
 }

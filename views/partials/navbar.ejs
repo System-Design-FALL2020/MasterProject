@@ -10,9 +10,7 @@
         <li><a href="/Browse">Browse</a></li>
         <li><a href="/Cart">Cart</a></li>
         <li><a href="/Login">Login</a></li>
-        <li><a href="/Signup">Sign Up</a></li>
-        <!--Why have a sign up button and a login button on the navbar? The Login in button brings you
-        to a portal where you can log in or sign up. One of them should be removed.-->
+        <li><a href="/Login">Sign Up</a></li>
       </ul>
     </nav>
   </div>
@@ -20,7 +18,5 @@
   <% if (title === 'Home') { %> <%- include("./homecontent.ejs") %> <% } else if
   (title === "Browse") { %> <%- include("./browsecontent.ejs") %> <% } else if
   (title === "Login") { %> <%- include("./logincontent.ejs") %> <% } else if
-  (title === "Cart") {%> <%- include("./cartcontent.ejs") %> <% } else if
-  (title === "Signup") {%> <%- include("./signupcontent.ejs") %> <% } %>
-
+  (title === "Cart") { %> <%- include("./cartcontent.ejs") %> <% } %>
 </header>
