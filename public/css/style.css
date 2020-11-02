@@ -154,9 +154,7 @@ html.is-leaving .transition-fade {
   transform: translateX(-100%);
 }
 
-/* Our Team */
-
-/* Cards */
+/* Our Team Cards*/
 
 .card-container {
   background: url("/img/backgrounds/team.jpg") no-repeat center center/cover;
