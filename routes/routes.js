@@ -55,18 +55,18 @@ router.get("/Cart", async (req, res) => {
   var user = { id: 1 };
   var cart = await Cart.findOne({
     where: {
-      user: user.id
-    }
+      user: user.id,
+    },
   });
   var cartItems = await CartItem.findAll({
     where: {
-      cart: cart.id
-    }
+      cart: cart,
+    },
   });
   for (var i = 0; i < cartItems.length; i++) {
     var prod = await Product.findByPk(cartItems[i].product);
-    cartItems[i].name = prod.name; 
-    cartItems[i].price = prod.price; 
+    cartItems[i].name = prod.name;
+    cartItems[i].price = prod.price;
   }
   res.render("index.ejs", {
     layout: "layouts/standardlayout.ejs",
