@@ -296,7 +296,6 @@ html.is-leaving .transition-fade {
   }
 }
 
-
 /* Cart */
 .cart-container {
   background-color: rgba(0, 0, 0, .4);
@@ -350,4 +349,24 @@ html.is-leaving .transition-fade {
 .button-row .checkout-button:hover {
   background-color: darkgreen;
   border-color: darkgreen;
+}
+
+/*Search Results*/
+.searchContainer {
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 20px;
+  padding-top: 20px;
+}
+
+.search-table {
+  padding: 20px;
+}
+
+.search-table td, .search-table th {
+  padding: 20px;
+  text-align: center;
+}
+
+.search-table .item-row td:first-child, .search-table tr:first-child th:first-child {
+  text-align: left;
 }

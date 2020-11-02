@@ -44,7 +44,7 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin:400);
 
 .webdesigntuts-workshop {
-	background: #151515;
+	/*background: #151515;*/
 	height: 100%;
 	position: absolute;
 	text-align: center;
@@ -185,4 +185,16 @@
 		border-color: rgb(245, 5, 5);
 		box-shadow: 0 0 20px rgba(245,5,5), inset 0 0 10px rgba(245,5,5), 0 2px 0 #000;
     }
+}
+
+#info {
+    justify-self: flex-start;
+    align-self: center;
+
+    margin-left: 200px;
+	margin-right: 200px;
+	padding-top: 70px;
+    
+	text-align: center;
+	font-size: medium;
 }

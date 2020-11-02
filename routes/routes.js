@@ -43,6 +43,14 @@ router.get("/Shop", (req, res) => {
   // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
+router.get("/About", (req, res) => {
+  res.render("index.ejs", {
+    layout: "layouts/standardlayout.ejs",
+    title: "About",
+  });
+  // res.sendFile('/views/login/login.html', { root: 'public'});
+});
+
 router.get("/Cart", async (req, res) => {
   var user = { id: 1 };
   var cart = await Cart.findOne({
