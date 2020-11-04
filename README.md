@@ -12,4 +12,4 @@ In order to access our site and see a preview of what it could look like, follow
 4. Navigate into the MasterProject directory within your gitbash terminal. You'll know you've made it when you see "(master)" in the command line prompt. Alternatively, right clicking on the "MasterProject" directory folder and selecting "Git Bash Here" will also bring you to the correct location.
 5. When in the root folder aka MasterProject run `npm ci` to install the node modules.
 6. Start the server with `npm run start`.
-7. Navigate to http://localhost:1337 in order to view the website.
+7. Navigate to http://localhost:8080 in order to view the website.
