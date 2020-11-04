@@ -1,24 +1,38 @@
 {
-  "name": "masterproject",
+  "name": "MasterProject",
   "version": "1.0.0",
-  "description": "Our teams overall master project",
-  "main": "./server/siteServer.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
+  "description": "Don't touch.....",
+  "main": "app.js",
   "scripts": {
-    "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app",
+    "dev": "nodemon app"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/System-Design-FALL2020/MasterProject.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/System-Design-FALL2020/MasterProject/issues"
   },
-  "homepage": "https://github.com/System-Design-FALL2020/MasterProject#readme"
+  "homepage": "https://github.com/System-Design-FALL2020/MasterProject#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "node": "^15.0.1",
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0",
+    "swup": "^2.0.11"
+  },
+  "devDependencies": {}
 }
