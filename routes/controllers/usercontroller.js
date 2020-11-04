@@ -27,7 +27,7 @@ async function createUser(request, response) {
       return user;
     });
 
-    response.json(`${result}`)
+    response.redirect("/Browse");
     // request.logIn(result, (err) => {
     //   if (err) throw new Error("Error at: req.logIn");
     //   console.log("Yay");

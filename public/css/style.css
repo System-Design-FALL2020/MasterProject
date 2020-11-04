@@ -298,7 +298,7 @@ html.is-leaving .transition-fade {
 
 /* Cart */
 .cart-container {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding-top: 20px;
 }
@@ -307,12 +307,14 @@ html.is-leaving .transition-fade {
   padding: 20px;
 }
 
-.cart-table td, .cart-table th {
+.cart-table td,
+.cart-table th {
   padding: 20px;
   text-align: right;
 }
 
-.cart-table .item-row td:first-child, .cart-table tr:first-child th:first-child {
+.cart-table .item-row td:first-child,
+.cart-table tr:first-child th:first-child {
   text-align: left;
 }
 
@@ -333,11 +335,12 @@ html.is-leaving .transition-fade {
   text-align: center;
 }
 
-.cart-table .total-row td, .cart-table .total-row th {
+.cart-table .total-row td,
+.cart-table .total-row th {
   padding: 5px 20px;
 }
 
-.cart-table .button-row td{
+.cart-table .button-row td {
   text-align: center;
 }
 
@@ -353,7 +356,7 @@ html.is-leaving .transition-fade {
 
 /*Search Results*/
 .searchContainer {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding-top: 20px;
 }
@@ -362,11 +365,18 @@ html.is-leaving .transition-fade {
   padding: 20px;
 }
 
-.search-table td, .search-table th {
+.search-table td,
+.search-table th {
   padding: 20px;
   text-align: center;
 }
 
-.search-table .item-row td:first-child, .search-table tr:first-child th:first-child {
+.search-table .item-row td:first-child,
+.search-table tr:first-child th:first-child {
   text-align: left;
+}
+
+.modal-dialog {
+  z-index: auto;
+  background-color: azure;
 }

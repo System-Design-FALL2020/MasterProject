@@ -6,6 +6,7 @@ const Cart = require("../models/cart");
 const CartItem = require("../models/cartItem");
 
 const router = express.Router();
+router.use(userRouter);
 
 router.get("/", (req, res) => {
   res.redirect("/Home");
@@ -31,6 +32,14 @@ router.get("/Login", (req, res) => {
   res.render("index.ejs", {
     layout: "layouts/standardlayout.ejs",
     title: "Login",
+  });
+  // res.sendFile('/views/login/login.html', { root: 'public'});
+});
+
+router.get("/SignUp", (req, res) => {
+  res.render("index.ejs", {
+    layout: "layouts/standardlayout.ejs",
+    title: "SignUp",
   });
   // res.sendFile('/views/login/login.html', { root: 'public'});
 });
