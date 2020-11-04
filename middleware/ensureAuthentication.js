@@ -1,8 +1,8 @@
 const ensureAuthentication = (req, res, next) => {
   if (req.isAuthenticated()) {
-    next();
+    return true;
   } else {
-    res.json({ error: "No authentication" });
+    return false;
   }
 };
 

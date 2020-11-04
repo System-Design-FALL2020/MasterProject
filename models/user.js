@@ -28,17 +28,16 @@ const User = sequelize.define(
         this.setDataValue("password", hash);
       },
     },
-    // cart: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    // },
+    cart: {
+      type: DataTypes.INTEGER,
+    },
   },
   { timestamps: false }
 );
 
 async function syncUser() {
   try {
-    await User.sync();
+    await User.sync({ force: true });
   } catch (error) {
     console.log(error);
   }

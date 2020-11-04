@@ -1,46 +1,73 @@
+<script>
+  var runningTotal = 0;
+  window.onload = () => {
+    const cart = JSON.parse(sessionStorage.getItem("Cart"));
+    cart.forEach((element) => {
+      var table = document.querySelector(".cart-table");
+      var tr = document.createElement("tr");
+      var th1 = document.createElement("th");
+      var th2 = document.createElement("th");
+      var th3 = document.createElement("th");
+      var th4 = document.createElement("th");
+      runningTotal += parseFloat(element.price.replace("$", ""));
+
+      th1.appendChild(document.createTextNode(element.name));
+      th2.appendChild(document.createTextNode(element.price));
+      th3.appendChild(document.createTextNode(element.price));
+      tr.appendChild(th1);
+      var button = document.createElement("button");
+      button.className = "removal-button";
+      button.appendChild(document.createTextNode("X"));
+      tr.append(button);
+      tr.appendChild(th2);
+
+      tr.appendChild(th3);
+      table.appendChild(tr);
+
+      button.addEventListener("click", () => removeFromCart(element));
+
+      if (cart[cart.length - 1] === element) {
+        tr = document.createElement("tr");
+        th1 = document.createElement("th");
+        th2 = document.createElement("th");
+        th3 = document.createElement("th");
+        th1.appendChild(document.createTextNode(""));
+        th2.appendChild(document.createTextNode(""));
+        th3.appendChild(document.createTextNode("Subtotal"));
+        th4.appendChild(document.createTextNode("$" + runningTotal));
+        tr.appendChild(th1);
+        tr.appendChild(th2);
+        tr.appendChild(th3);
+        tr.appendChild(th4);
+        table.appendChild(tr);
+        var tax = (runningTotal * 0.08125).toFixed(2);
+      }
+    });
+  };
+
+  function removeFromCart(element) {
+    var cart = JSON.parse(sessionStorage.getItem("Cart"));
+    const filtered = cart.filter((element1) => element1.name != element.name);
+    cart = filtered;
+    sessionStorage.setItem("Cart", JSON.stringify(cart));
+    window.location.reload();
+  }
+</script>
+
 <main id="swup" class="transition-fade">
   <div class="content">
-  	<div class="cart-container">
-	    <h1>Your Cart</h1>
-	    <table class="cart-table">
-	    	<tr>
-	    		<th>Name</th>
-	    		<th>Quantity</th>
-	    		<th>Price</th>
-	    		<th>Total</th>
-	    	</tr>
-	    	<% sub = 0.00 %>
-		    <% for(var i=0; i<cartItems.length; i++){ %>
-		    	<tr class="item-row">
-					<td><%= cartItems[i].name %></td>
-					<td>
-						<button class="removal-button">X</button>
-						<input type="number" step="1" size="3" min="1" max="999" value="<%= cartItems[i].quantity %>">
-					</td>
-					<td><%= cartItems[i].price %></td>
-					<% sub += cartItems[i].price * cartItems[i].quantity %>
-					<td><%= cartItems[i].price * cartItems[i].quantity %></td>
-				</tr>
-			<% } %>
-			<% tax = sub * 0.0825 %>
-			<tr class="total-row">
-				<th colspan="3">SubToal</th>
-				<td>$<%= sub %></td>
-			</tr>
-			<tr class="total-row">
-				<th colspan="3">Tax</th>
-				<td>$<%= tax.toFixed(2) %></td>
-			</tr>
-			<tr class="total-row">
-				<th colspan="3">Total</th>
-				<td>$<%= (sub + tax).toFixed(2) %></td>
-			</tr>
-			<tr class="button-row">
-				<td colspan="4">
-					<a href="/checkedout"><button class="checkout-button">Checkout</button></a>
-				</td>
-			</tr>
-		</table>
-	</div>
+    <div class="cart-container">
+      <h1>Your Cart</h1>
+      <table class="cart-table">
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+
+        <tr class="item-row"></tr>
+      </table>
+    </div>
   </div>
 </main>

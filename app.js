@@ -27,7 +27,8 @@ app.use(expressEjsLayouts);
 app.set("view engine", "ejs");
 app.use(
   session({
-    secret: process.env.SECRET_CODE || "secretcode",
+    name: "Auth",
+    secret: "secretcode",
     resave: true,
     saveUninitialized: true,
   })

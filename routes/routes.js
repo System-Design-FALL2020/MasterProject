@@ -4,6 +4,8 @@ const userRouter = require("./controllers/usercontroller");
 const Product = require("../models/product");
 const Cart = require("../models/cart");
 const CartItem = require("../models/cartItem");
+const ensureAuthentication = require("../middleware/ensureAuthentication");
+const { route } = require("./controllers/usercontroller");
 
 const router = express.Router();
 router.use(userRouter);
@@ -60,29 +62,36 @@ router.get("/About", (req, res) => {
   // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
-router.get("/Cart", async (req, res) => {
-  var user = { id: 1 };
-  var cart = await Cart.findOne({
-    where: {
-      user: user.id,
-    },
-  });
-  var cartItems = await CartItem.findAll({
-    where: {
-      cart: cart,
-    },
-  });
-  for (var i = 0; i < cartItems.length; i++) {
-    var prod = await Product.findByPk(cartItems[i].product);
-    cartItems[i].name = prod.name;
-    cartItems[i].price = prod.price;
-  }
+router.get("/Cart", (req, res) => {
   res.render("index.ejs", {
     layout: "layouts/standardlayout.ejs",
     title: "Cart",
-    cartItems: cartItems,
   });
-  // res.sendFile('/views/login/login.html', { root: 'public'});
 });
+
+// router.get("/Cart", async (req, res) => {
+//   var user = { id: 1 };
+//   var cart = await Cart.findOne({
+//     where: {
+//       user: user.id,
+//     },
+//   });
+//   var cartItems = await CartItem.findAll({
+//     where: {
+//       cart: cart,
+//     },
+//   });
+//   for (var i = 0; i < cartItems.length; i++) {
+//     var prod = await Product.findByPk(cartItems[i].product);
+//     cartItems[i].name = prod.name;
+//     cartItems[i].price = prod.price;
+//   }
+//   res.render("index.ejs", {
+//     layout: "layouts/standardlayout.ejs",
+//     title: "Cart",
+//     cartItems: cartItems,
+//   });
+//   // res.sendFile('/views/login/login.html', { root: 'public'});
+// });
 
 module.exports = router;
