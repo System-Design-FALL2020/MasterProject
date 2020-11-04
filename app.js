@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const router = require("./routes/routes");
 const sequelize = require("./middleware/databaseconnection");
 const expressEjsLayouts = require("express-ejs-layouts");
+const passport = require("./middleware/passportconfig");
+const session = require("express-session");
 const app = express();
 
 async function establishConnnection() {
@@ -23,6 +25,16 @@ app.use(bodyParser.json());
 // Using express ejs layouts makes the view engine look to the layouts folder first
 app.use(expressEjsLayouts);
 app.set("view engine", "ejs");
+app.use(
+  session({
+    secret: process.env.SECRET_CODE || "secretcode",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
 // Put the routes in a separate folder for readability
 app.use(router);
 

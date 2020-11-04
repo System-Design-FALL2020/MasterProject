@@ -1,5 +1,6 @@
-const passport = require("passport-local");
-const LocalStrategy = passport.Strategy;
+const passport = require("passport");
+const passportLocal = require("passport-local");
+const LocalStrategy = passportLocal.Strategy;
 // B Crypt needs to be installed
 // Use a VM
 passport.use(
@@ -44,4 +45,4 @@ passport.deserializeUser(async (id, done) => {
   }
 });
 
-module.exports = { passport, LocalStrategy };
+module.exports = passport;
