@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/System-Design-FALL2020/MasterProject#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
@@ -32,7 +33,8 @@
     "path": "^0.12.7",
     "sequelize": "^6.3.5",
     "sqlite3": "^5.0.0",
-    "swup": "^2.0.11"
+    "swup": "^2.0.11",
+    "unirest": "^0.6.0"
   },
   "devDependencies": {}
 }

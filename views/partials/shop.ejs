@@ -1,4 +1,12 @@
 <main id="swup" class="transition-fade">
+  <% for(var i=0; i< games.length; i++) {%>
+    <tr>
+      <th><%= games[i].name %></th>
+      <th><%= games[i].rating %></th>
+    </tr>
+ <% } %>
+
+
   <div class="content">
     <h1>Search Results</h1>
     <table class="search-table">

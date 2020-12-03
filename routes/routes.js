@@ -1,9 +1,7 @@
 const express = require("express");
 const userRouter = require("./controllers/usercontroller");
+const axios = require("axios");
 
-const Product = require("../models/product");
-const Cart = require("../models/cart");
-const CartItem = require("../models/cartItem");
 const ensureAuthentication = require("../middleware/ensureAuthentication");
 const { route } = require("./controllers/usercontroller");
 
@@ -41,15 +39,30 @@ router.get("/Login", (req, res) => {
 router.get("/SignUp", (req, res) => {
   res.render("index.ejs", {
     layout: "layouts/standardlayout.ejs",
-    title: "SignUp",
+    title: "SignUp"
   });
-  // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
 router.get("/Shop", (req, res) => {
-  res.render("index.ejs", {
-    layout: "layouts/standardlayout.ejs",
-    title: "Shop",
+  const options = {
+    method: 'GET',
+    url: 'https://rawg-video-games-database.p.rapidapi.com/games',
+    headers: {
+      'x-rapidapi-key': '80f34a6ef3mshf579f852cc2cd74p1de947jsn4a7a117cb73e',
+      'x-rapidapi-host': 'rawg-video-games-database.p.rapidapi.com'
+    }
+  };
+
+  axios.request(options).then(function (response) {
+    let arr = response.data.results;
+    //console.log(response);
+    res.render("index.ejs", {
+      layout: "layouts/standardlayout.ejs",
+      title: "Shop",
+      games: arr
+    });
+  }).catch(function (error) {
+    res.send(error);
   });
   // res.sendFile('/views/login/login.html', { root: 'public'});
 });
