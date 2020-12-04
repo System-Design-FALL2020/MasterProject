@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/System-Design-FALL2020/MasterProject#readme",
   "dependencies": {
+    "animejs": "^3.2.1",
     "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
@@ -28,6 +29,7 @@
     "express-session": "^1.17.1",
     "node": "^15.0.1",
     "nodemon": "^2.0.6",
+    "particle.js": "^1.0.7",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",

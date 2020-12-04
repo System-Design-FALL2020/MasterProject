@@ -17,7 +17,6 @@ router.get("/Home", (req, res) => {
     layout: "layouts/standardlayout.ejs",
     title: "Home",
   });
-  // res.sendFile('/views/home/index.html', { root: 'public'});
 });
 
 router.get("/Browse", (req, res) => {
@@ -25,23 +24,21 @@ router.get("/Browse", (req, res) => {
     layout: "layouts/standardlayout.ejs",
     title: "Browse",
   });
-  // res.sendFile('/views/browse/browse.html', { root: 'public'});
 });
 
 router.get("/Login", (req, res) => {
-  res.render("index.ejs", {
+  res.render("login.ejs", {
     layout: "layouts/standardlayout.ejs",
-    title: "Login",
+    title: "Login"
   });
-  // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
-router.get("/SignUp", (req, res) => {
-  res.render("index.ejs", {
-    layout: "layouts/standardlayout.ejs",
-    title: "SignUp"
-  });
-});
+// router.get("/SignUp", (req, res) => {
+//   res.render("index.ejs", {
+//     layout: "layouts/standardlayout.ejs",
+//     title: "SignUp"
+//   });
+// });
 
 router.get("/Shop", (req, res) => {
   const options = {
@@ -55,7 +52,6 @@ router.get("/Shop", (req, res) => {
 
   axios.request(options).then(function (response) {
     let arr = response.data.results;
-    //console.log(response);
     res.render("index.ejs", {
       layout: "layouts/standardlayout.ejs",
       title: "Shop",
@@ -64,7 +60,6 @@ router.get("/Shop", (req, res) => {
   }).catch(function (error) {
     res.send(error);
   });
-  // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
 router.get("/About", (req, res) => {
@@ -72,7 +67,6 @@ router.get("/About", (req, res) => {
     layout: "layouts/standardlayout.ejs",
     title: "About",
   });
-  // res.sendFile('/views/login/login.html', { root: 'public'});
 });
 
 router.get("/Cart", (req, res) => {

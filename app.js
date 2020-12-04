@@ -7,6 +7,8 @@ const passport = require("./middleware/passportconfig");
 const session = require("express-session");
 const app = express();
 
+
+
 async function establishConnnection() {
   try {
     await sequelize.authenticate();
