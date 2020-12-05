@@ -1,0 +1,83 @@
+<%- include("./partials/homecontent.ejs") %>
+<div class="full-screen flex-container-center">
+  <span id="element"></span>
+</div>
+
+<style>
+  #element {
+    font-size: 60px;
+    margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+  }
+
+  .typed-cursor {
+    display: none;
+  }
+
+  .full-screen {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: url(https://images.unsplash.com/photo-1511512578047-dfb367046420?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80)
+      no-repeat center center fixed;
+    color: white;
+    z-index: 100000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .flex-container-center {
+    display: flex;
+  }
+
+  .content {
+    text-align: center;
+    color: white;
+    margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+    height: 20rem;
+  }
+  .content h1 {
+    font-size: 55px;
+  }
+  .content p {
+    font-size: 23px;
+  }
+</style>
+
+<script>
+  window.addEventListener("load", (event) => {
+    if (!document.cookie.includes("firstvisit=false")) {
+      const fadeTarget = document.querySelector(".full-screen");
+      setTimeout(() => {
+        setInterval(() => {
+          if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+          }
+          if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+          } else {
+            clearInterval(fadeEffect);
+          }
+        }, 60);
+      }, 5000);
+      //document.cookie = "firstvisit=false";
+      var typed = new Typed("#element", {
+        strings: ["Welcome To Atomic Gaming"],
+
+        smartBackspace: true, // Default value
+        typeSpeed: 60,
+      });
+    }
+  });
+</script>

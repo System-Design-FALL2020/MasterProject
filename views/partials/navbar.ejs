@@ -9,12 +9,12 @@
       <li><a href="/Browse">Browse</a></li>
       <li><a href="/Cart">Cart</a></li>
       <% if (!authenticated) { %>
-      <li><a href="/Login">Login</a></li>
+      <li><a href="/Login">Log In</a></li>
       <li><a href="/SignUp">Sign Up</a></li>
       <% } else { %>
       <li>
         <form action="/logout" method="GET">
-          <a href="#" id="logout">Logout</a>
+          <a href="#" id="logout">Log out</a>
           <input style="display: none" type="submit" id="hi" />
         </form>
       </li>
