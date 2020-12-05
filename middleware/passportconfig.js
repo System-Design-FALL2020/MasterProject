@@ -1,18 +1,20 @@
 const passport = require("passport");
 const passportLocal = require("passport-local");
+const bcrypt = require("bcrypt");
+const User = require("../models/user");
 const LocalStrategy = passportLocal.Strategy;
-// B Crypt needs to be installed
-// Use a VM
+
 passport.use(
   new LocalStrategy(
     { usernameField: "username", passwordField: "password" },
     async (username, password, done) => {
       // Match user
       const user = await User.findOne({
-        where: { username },
+        where: { username: username },
       });
-      if (!user) {
-        done(null, false);
+
+      if (user === null) {
+        return done(null, false);
       }
 
       // Match password

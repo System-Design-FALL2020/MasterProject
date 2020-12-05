@@ -8,8 +8,22 @@
       <li><a href="/">Home</a></li>
       <li><a href="/Browse">Browse</a></li>
       <li><a href="/Cart">Cart</a></li>
+      <% if (!authenticated) { %>
       <li><a href="/Login">Login</a></li>
       <li><a href="/SignUp">Sign Up</a></li>
+      <% } else { %>
+      <li>
+        <form action="/logout" method="GET">
+          <input type="submit" value="Logout" />
+        </form>
+      </li>
+      <%- include("./searchbar.ejs") %> <% } %>
     </ul>
   </nav>
 </div>
+
+<style>
+  #navbar {
+    z-index: 10;
+  }
+</style>
