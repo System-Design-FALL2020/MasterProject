@@ -71,13 +71,15 @@
           }
         }, 60);
       }, 5000);
-      //document.cookie = "firstvisit=false";
+      document.cookie = "firstvisit=false";
       var typed = new Typed("#element", {
         strings: ["Welcome To Atomic Gaming"],
 
         smartBackspace: true, // Default value
         typeSpeed: 60,
       });
+    } else {
+      document.querySelector(".full-screen").style = "opacity: 0";
     }
   });
 </script>
