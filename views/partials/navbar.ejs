@@ -14,16 +14,20 @@
       <% } else { %>
       <li>
         <form action="/logout" method="GET">
-          <input type="submit" value="Logout" />
+          <a href="#" id="logout">Logout</a>
+          <input style="display: none" type="submit" id="hi" />
         </form>
       </li>
-      <%- include("./searchbar.ejs") %> <% } %>
+      <% } %>
     </ul>
   </nav>
 </div>
 
-<style>
-  #navbar {
-    z-index: 10;
+<script>
+  const logout = document.querySelector("#logout");
+  if (logout) {
+    logout.addEventListener("click", (e) => {
+      document.querySelector("#hi").click();
+    });
   }
-</style>
+</script>
