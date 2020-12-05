@@ -28,11 +28,34 @@ router.get("/Creators", (req, res) => {
 });
 
 router.get("/Browse", (req, res) => {
+  // const options = {
+  //   method: 'GET',
+  //   url: 'https://rawg-video-games-database.p.rapidapi.com/games',
+  //   headers: {
+  //     'x-rapidapi-key': '80f34a6ef3mshf579f852cc2cd74p1de947jsn4a7a117cb73e',
+  //     'x-rapidapi-host': 'rawg-video-games-database.p.rapidapi.com'
+  //   }
+  // };
+
   res.render("browse.ejs", {
     layout: "layouts/standardlayout.ejs",
     title: "Browse",
-    authenticated: req.isAuthenticated()
+    authenticated: req.isAuthenticated(),
   });
+  // axios.request(options).then(function (response) {
+  //   let arr = response.data.results;
+
+  // }).catch(function (error) {
+  //   res.send(error);
+  // });
+
+
+  // res.render("browse.ejs", {
+  //   layout: "layouts/standardlayout.ejs",
+  //   title: "Browse",
+  //   games:
+  //     authenticated: req.isAuthenticated()
+  // });
 });
 
 router.get("/Login", (req, res) => {
@@ -83,26 +106,7 @@ router.get("/SignUp", (req, res) => {
 });
 
 router.get("/Shop", (req, res) => {
-  const options = {
-    method: 'GET',
-    url: 'https://rawg-video-games-database.p.rapidapi.com/games',
-    headers: {
-      'x-rapidapi-key': '80f34a6ef3mshf579f852cc2cd74p1de947jsn4a7a117cb73e',
-      'x-rapidapi-host': 'rawg-video-games-database.p.rapidapi.com'
-    }
-  };
 
-  axios.request(options).then(function (response) {
-    let arr = response.data.results;
-    res.render("index.ejs", {
-      layout: "layouts/standardlayout.ejs",
-      title: "Shop",
-      authenticated: req.isAuthenticated(),
-      games: arr
-    });
-  }).catch(function (error) {
-    res.send(error);
-  });
 });
 
 router.get("/About", (req, res) => {

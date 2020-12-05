@@ -1,49 +1,69 @@
+<div class="content">
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <table class="cart-table">
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+
+      <tr class="item-row"></tr>
+    </table>
+  </div>
+</div>
+
 <script>
   var runningTotal = 0;
   window.onload = () => {
     const cart = JSON.parse(sessionStorage.getItem("Cart"));
-    cart.forEach((element) => {
-      var table = document.querySelector(".cart-table");
-      var tr = document.createElement("tr");
-      var th1 = document.createElement("th");
-      var th2 = document.createElement("th");
-      var th3 = document.createElement("th");
-      var th4 = document.createElement("th");
-      runningTotal += parseFloat(element.price.replace("$", ""));
+    if (cart) {
+      cart.forEach((element) => {
+        var table = document.querySelector(".cart-table");
+        var tr = document.createElement("tr");
+        var th1 = document.createElement("th");
+        var th2 = document.createElement("th");
+        var th3 = document.createElement("th");
+        var th4 = document.createElement("th");
+        runningTotal += parseFloat(element.price.replace("$", ""));
 
-      th1.appendChild(document.createTextNode(element.name));
-      th2.appendChild(document.createTextNode(element.price));
-      th3.appendChild(document.createTextNode(element.price));
-      tr.appendChild(th1);
-      var button = document.createElement("button");
-      button.className = "removal-button";
-      button.appendChild(document.createTextNode("X"));
-      tr.append(button);
-      tr.appendChild(th2);
-
-      tr.appendChild(th3);
-      table.appendChild(tr);
-
-      button.addEventListener("click", () => removeFromCart(element));
-
-      if (cart[cart.length - 1] === element) {
-        tr = document.createElement("tr");
-        th1 = document.createElement("th");
-        th2 = document.createElement("th");
-        th3 = document.createElement("th");
-        th1.appendChild(document.createTextNode(""));
-        th2.appendChild(document.createTextNode(""));
-        th3.appendChild(document.createTextNode("Total"));
-        var tax = runningTotal * 0.08125;
-        runningTotal += tax;
-        th4.appendChild(document.createTextNode("$" + runningTotal.toFixed(2)));
+        th1.appendChild(document.createTextNode(element.name));
+        th2.appendChild(document.createTextNode(element.price));
+        th3.appendChild(document.createTextNode(element.price));
         tr.appendChild(th1);
+        var button = document.createElement("button");
+        button.className = "removal-button";
+        button.appendChild(document.createTextNode("X"));
+        tr.append(button);
         tr.appendChild(th2);
+
         tr.appendChild(th3);
-        tr.appendChild(th4);
         table.appendChild(tr);
-      }
-    });
+
+        button.addEventListener("click", () => removeFromCart(element));
+
+        if (cart[cart.length - 1] === element) {
+          tr = document.createElement("tr");
+          th1 = document.createElement("th");
+          th2 = document.createElement("th");
+          th3 = document.createElement("th");
+          th1.appendChild(document.createTextNode(""));
+          th2.appendChild(document.createTextNode(""));
+          th3.appendChild(document.createTextNode("Total"));
+          var tax = runningTotal * 0.08125;
+          runningTotal += tax;
+          th4.appendChild(
+            document.createTextNode("$" + runningTotal.toFixed(2))
+          );
+          tr.appendChild(th1);
+          tr.appendChild(th2);
+          tr.appendChild(th3);
+          tr.appendChild(th4);
+          table.appendChild(tr);
+        }
+      });
+    }
   };
 
   function removeFromCart(element) {
@@ -54,21 +74,3 @@
     window.location.reload();
   }
 </script>
-
-<main id="swup" class="transition-fade">
-  <div class="content">
-    <div class="cart-container">
-      <h1>Your Cart</h1>
-      <table class="cart-table">
-        <tr>
-          <th>Name</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Total</th>
-        </tr>
-
-        <tr class="item-row"></tr>
-      </table>
-    </div>
-  </div>
-</main>

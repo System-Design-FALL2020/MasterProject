@@ -13,7 +13,6 @@ function addToCart(num) {
         instock: "Yes",
         price: "$39.99",
       });
-
       sessionStorage.setItem("Cart", JSON.stringify(obj));
       break;
     case 2:
@@ -81,4 +80,9 @@ function addToCart(num) {
     default:
       break;
   }
+  let modal = document.querySelector(".addedItem");
+  modal.style = "opacity: 1";
+  setTimeout(() => {
+    modal.style = "opacity: 0"
+  }, 500)
 }

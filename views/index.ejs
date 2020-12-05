@@ -60,7 +60,7 @@
     if (!document.cookie.includes("firstvisit=false")) {
       const fadeTarget = document.querySelector(".full-screen");
       setTimeout(() => {
-        setInterval(() => {
+        let fadeEffect = setInterval(() => {
           if (!fadeTarget.style.opacity) {
             fadeTarget.style.opacity = 1;
           }
@@ -68,6 +68,8 @@
             fadeTarget.style.opacity -= 0.1;
           } else {
             clearInterval(fadeEffect);
+            document.querySelector(".full-screen").style =
+              "opacity: 0; z-index: -1";
           }
         }, 60);
       }, 5000);
@@ -79,7 +81,7 @@
         typeSpeed: 60,
       });
     } else {
-      document.querySelector(".full-screen").style = "opacity: 0";
+      document.querySelector(".full-screen").style = "opacity: 0; z-index: -1";
     }
   });
 </script>
